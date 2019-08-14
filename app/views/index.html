@@ -1,0 +1,85 @@
+
+{% extends "layout.html" %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        What is Assistive Technology?
+      </h1>
+      <p class="bad-text">
+
+
+        Assistive technology (AT) is assistive, adaptive, and rehabilitative devices for people with disabilities or the elderly population. People who have disabilities often have difficulty performing activities of daily living (ADLs) independently, or even with assistance. ADLs are self-care activities that include toileting, mobility (ambulation), eating, bathing, dressing, grooming, and personal device care. Assistive technology can ameliorate the effects of disabilities that limit the ability to perform ADLs. Assistive technology promotes greater independence by enabling people to perform tasks they were formerly unable to accomplish, or had great difficulty accomplishing, by providing enhancements to, or changing methods of interacting with, the technology needed to accomplish such tasks. For example, wheelchairs provide independent mobility for those who cannot walk, while assistive eating devices can enable people who cannot feed themselves to do so. Due to assistive technology, people with disabilities have an opportunity of a more positive and easygoing lifestyle, with an increase in "social participation," "security and control," and a greater chance to "reduce institutional costs without significantly increasing household expenses."
+      </p>
+
+      <div>
+        <a onclick="javascript:window.location.href='https://en.wikipedia.org/wiki/Assistive_technology'" class="fake-link"> from Wikipedia </a>
+      </div>
+
+      <p class="govuk-!-margin-top-4">For our purposes when we talk about AT we mean software to help people use digital services, such as screenreaders</p>
+
+      <h1 class="govuk-heading-l">What do people use?</h1>
+      <img src="/public/images/graph.png" alt="Image of a graph about assistive technology" />
+<hr>
+      <table class="govuk-table">
+      <caption class="govuk-table__caption contrast">Screenreaders and OSes</caption>
+      <p class="govuk-!-margin-top-4">Screenreaders are OS specific, use this chart to look up which ones are available to you.</p>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Screenreader</th>
+          <th scope="col" class="govuk-table__header">Mac</th>
+          <th scope="col" class="govuk-table__header">Windows</th>
+          <th scope="col" class="govuk-table__header"></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Voiceover</th>
+          <td class="govuk-table__cell happy-cell"><i class="far fa-smile"></i></td>
+          <td class="govuk-table__cell bad-cell"><i class="far fa-frown"></i></td>
+          <td class="govuk-table__cell "><a href="">Find out more</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">JAWS</th>
+          <td class="govuk-table__cell bad-cell"><i class="far fa-frown"></i></td>
+          <td class="govuk-table__cell happy-cell"><i class="far fa-smile"></i></td>
+          <td class="govuk-table__cell "><a href="">Find out more</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">NDVA</th>
+          <td class="govuk-table__cell bad-cell"><i class="far fa-frown"></i></td>
+          <td class="govuk-table__cell happy-cell"><i class="far fa-smile"></i></td>
+          <td class="govuk-table__cell "><a href="">Find out more</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <h3 tabIndex="0" class="govuk-heading-m">Register for our newsletter</h3>
+    <form>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event">
+          Given name
+        </label>
+        <input class="govuk-input" id="first-name" name="first-name" type="text">
+        <label class="govuk-label" for="last-name">
+          Family name
+        </label>
+        <input class="govuk-input" id="last-name" name="first-name" type="text">
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="email">
+          Email addresss
+        </label>
+        <input class="govuk-input" id="email" name="email" type="text" placeholder="For example hello@example.com">
+    </form>
+        <div class="govuk-button">Register</div>
+      </div>
+
+  </div>
+</div>
+
+{% endblock %}
