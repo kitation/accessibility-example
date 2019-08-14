@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
   Confirmation page example
@@ -10,9 +10,9 @@
     <div class="govuk-grid-column-two-thirds">
 
       <div class="govuk-panel govuk-panel--confirmation">
-        <h1 class="govuk-panel__title">Application complete</h1>
+        <h1 class="govuk-panel__title">Thanks for registering {{data['email']}}!</h1>
         <div class="govuk-panel__body">
-          Your reference number<br><strong>HDJ2123F</strong>
+          <img src="/public/images/mail100100100-black-small-icon.png" />
         </div>
       </div>
 

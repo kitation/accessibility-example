@@ -9,4 +9,12 @@ $(document).ready(function () {
   window.GOVUKFrontend.initAll();
   $('title').remove();
   $(".govuk-skip-link").remove();
+
+  $('#email-form').keydown(function(e) {
+    if (e.keyCode == 13)
+    {
+      e.stopPropagation();
+      e.preventDefault();
+    }
+  });
 })
