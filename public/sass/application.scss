@@ -18,12 +18,28 @@ $govuk-assets-path: '/govuk/assets/';
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 .fake-link {
   text-decoration: underline;
+  font-family: "GDS Transport",Arial,sans-serif;
+  cursor: pointer;
+  color: #1d70b8;
 }
 
 .bad-cell {
-  color: govuk-colour("mid-grey")
+  color: govuk-colour("red")
+}
+
+.happy-cell {
+  color: govuk-colour("green")
 }
 
 .bad-text {
   text-align: justify;
+}
+
+.contrast {
+  color: govuk-colour("mid-grey");
+}
+
+img {
+  height: 300px;
+  width: 500px;
 }
