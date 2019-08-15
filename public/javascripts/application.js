@@ -9,6 +9,7 @@ $(document).ready(function () {
   window.GOVUKFrontend.initAll();
   $('title').remove();
   $(".govuk-skip-link").remove();
+  $('#form-error').hide();
 
   $('#email-form').keydown(function(e) {
     if (e.keyCode == 13)
@@ -17,4 +18,26 @@ $(document).ready(function () {
       e.preventDefault();
     }
   });
+
+  $('#email-form').on('submit', function(e) {
+    let errors = false;
+    if ($('#first-name').val() == '')
+      errors = true;
+    if ($('#last-name').val() == '')
+      errors = true
+    if ($('#email').val() == '')
+        errors = true;
+    if (errors) {
+      e.stopPropagation();
+      e.preventDefault();
+      // add class to form
+      $('#email-form').addClass('govuk-form-group--error');
+
+      // error message
+      $('#form-error').removeClass("govuk-visually-hidden");
+      $('#form-error').show();
+    }
+    return true;
+
+  })
 })
