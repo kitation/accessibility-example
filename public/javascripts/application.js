@@ -7,6 +7,7 @@ if (window.console && window.console.info) {
 
 $(document).ready(function () {
   window.GOVUKFrontend.initAll();
+
   $('title').remove();
   $(".govuk-skip-link").remove();
   $('#form-error').hide();
@@ -40,4 +41,16 @@ $(document).ready(function () {
     return true;
 
   })
+
+  $(".modal").on("click", function(e) {
+    $('body').prepend('<div id="overlay"></div>');
+    $(".modal_dialog").show();
+    $("#main-heading")[0].scrollIntoView();
+  });
+
+  $('.modal__close').on('click', function(e) {
+    $('#overlay').remove();
+    $(".modal_dialog").hide();
+  });
+
 })
