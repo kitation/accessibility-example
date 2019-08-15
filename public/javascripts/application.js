@@ -43,6 +43,8 @@ $(document).ready(function () {
   })
 
   $(".modal").on("click", function(e) {
+    e.stopPropagation();
+    e.preventDefault();
     $('body').prepend('<div id="overlay"></div>');
     $(".modal_dialog").show();
     $("#main-heading")[0].scrollIntoView();
