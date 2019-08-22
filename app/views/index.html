@@ -21,6 +21,28 @@
 
       <h1 class="govuk-heading-l">What do people use?</h1>
       <img src="/public/images/graph.png" alt="Image of graph about assistive technology" />
+
+      <!-- From https://codepen.io/thierry/pen/gPoWxj -->
+      <div class="tabPanel-widget">
+        <label for="tab-1" tabindex="0"></label>
+          <input id="tab-1" type="radio" name="tabs" checked="true" aria-hidden="true">
+        <h2>Screen Maginifer</h2>
+        <div>
+          <p>A screen magnifier is software that interfaces with a computer's graphical output to present enlarged screen content. By enlarging part (or all) of a screen, people with visual impairments can better see words and images. This type of assistive technology is useful for people with some functional vision; people with visual impairments and little or no functional vision usually use a screen reader.</p>
+        </div>
+        <label for="tab-2" tabindex="0"></label>
+        <input id="tab-2" type="radio" name="tabs" aria-hidden="true">
+        <h2>Screen Reader</h2>
+        <div>
+          <p>The most widely used screen readers are often separate commercial products: JAWS from Freedom Scientific, NonVisual Desktop Access (NVDA) from NV Access, Window-Eyes from GW Micro, Dolphin Supernova by Dolphin, System Access from Serotek, and ZoomText Magnifier/Reader from AiSquared are prominent examples.
+        </div>
+        <label for="tab-3" tabindex="0"></label>
+        <input id="tab-3" type="radio" name="tabs" aria-hidden="true">
+        <h2>Speech Recognition</h2>
+        <div>
+          <p>Speech recognition is a interdisciplinary subfield of computational linguistics that develops methodologies and technologies that enables the recognition and translation of spoken language into text by computers. It is also known as automatic speech recognition (ASR), computer speech recognition or speech to text (STT). It incorporates knowledge and research in the linguistics, computer science, and electrical engineering fields.</p>
+        </div>
+      </div>
 <hr>
       <table class="govuk-table">
       <caption class="govuk-table__caption">Screenreaders and OSes</caption>
@@ -85,10 +107,7 @@
         <input class="govuk-input" id="last-name" name="last-name" type="text">
       </div>
       <div class="govuk-form-group">
-        <label class="govuk-label" for="email">
-          Email addresss
-        </label>
-        <input class="govuk-input" id="email" name="email" type="text" placeholder="For example hello@example.com">
+        <input class="govuk-input" id="email" name="email" type="text" placeholder="Your email address, for example hello@example.com">
     </form>
         <button id="go-confirm" class="govuk-button">Register</div>
       </div>
