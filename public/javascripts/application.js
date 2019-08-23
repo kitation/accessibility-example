@@ -40,7 +40,11 @@ $(document).ready(function () {
     }
     return true;
 
-  })
+  });
+
+  $('div #go-confirm').on('click', function(e) {
+    $('#email-form').submit();
+  });
 
   $(".modal").on("click", function(e) {
     e.stopPropagation();
