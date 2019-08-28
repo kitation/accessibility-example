@@ -12,4 +12,8 @@ router.get('confirmation', function(req, res) {
     res.render('confimation.html')
 })
 
+router.get('working', function(req, res) {
+  res.render('working');
+})
+
 module.exports = router

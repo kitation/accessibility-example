@@ -8,26 +8,45 @@ if (window.console && window.console.info) {
 $(document).ready(function () {
   window.GOVUKFrontend.initAll();
 
-  $('title').remove();
-  $(".govuk-skip-link").remove();
-  $('#form-error').hide();
+  if ($('#wrapper').hasClass('test')) {
+    $('title').remove();
+    $(".govuk-skip-link").remove();
 
-  $('#email-form').keydown(function(e) {
-    if (e.keyCode == 13)
-    {
-      e.stopPropagation();
-      e.preventDefault();
-    }
-  });
+    $('#email-form').keydown(function(e) {
+      if (e.keyCode == 13 && $('#wrapper').hasClass('test'))
+      {
+        e.stopPropagation();
+        e.preventDefault();
+      }
+    });
+  }
+
+  $('#form-error').hide();
+  $('.govuk-error-summary').hide();
+
+
 
   $('#email-form').on('submit', function(e) {
     let errors = false;
-    if ($('#first-name').val() == '')
+    if ($('#wrapper').hasClass('test')) {
+      if ($('#first-name').val() == '')
       errors = true;
-    if ($('#last-name').val() == '')
-      errors = true
-    if ($('#email').val() == '')
+      if ($('#last-name').val() == '')
+      errors = true;
+      if ($('#email').val() == '')
+      errors = true;
+    } else {
+      if ($('#email').val() == '') {
         errors = true;
+        $('#focus-link').attr('href', '#email');
+      }
+      if ($('#full-name').val() == '') {
+        errors = true;
+        $('#focus-link').attr('href', '#full-name');
+      }
+    }
+
+
     if (errors) {
       e.stopPropagation();
       e.preventDefault();
@@ -37,6 +56,8 @@ $(document).ready(function () {
       // error message
       $('#form-error').removeClass("govuk-visually-hidden");
       $('#form-error').show();
+
+      $('.govuk-error-summary').removeClass('govuk-visually-hidden');
     }
     return true;
 
