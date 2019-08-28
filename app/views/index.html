@@ -93,6 +93,7 @@
 
     <h3 tabIndex="0" class="govuk-heading-m">Register for our newsletter</h3>
     <form id="email-form" action='/confirmation' method="POST">
+      <input type="hidden" id="frequency" name="frequency" value="daily">
       <span id="form-error" class="govuk-error-message govuk-visually-hidden">
         <span class="govuk-visually-hidden">Error:</span> INVALID: ALL FIELDS ARE REQUIRED
       </span>
@@ -110,7 +111,7 @@
         <input class="govuk-input" id="email" name="email" type="text" placeholder="Your email address, for example hello@example.com">
       </div>
         <div id="go-confirm" class="govuk-button">Weekly</div>
-        <button id="go-confirm" class="govuk-button aligned-button">Daily</button>
+        <button id="go-confirm" class="govuk-button aligned-button" type="submit">Daily</button>
       </form>
 
   </div>

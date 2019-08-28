@@ -42,7 +42,8 @@ $(document).ready(function () {
 
   });
 
-  $('div #go-confirm').on('click', function(e) {
+  $('div#go-confirm').on('click', function(e) {
+    $('#frequency').val("weekly");
     $('#email-form').submit();
   });
 

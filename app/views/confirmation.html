@@ -1,7 +1,7 @@
 {% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
-  Confirmation page example
+  Assistive technology information website - confirmation of email subscription!
 {% endblock %}
 
 {% block content %}
@@ -11,6 +11,7 @@
 
       <div class="govuk-panel govuk-panel--confirmation">
         <h1 class="govuk-panel__title">Thanks for registering {{data['email']}}!</h1>
+        <p>You will recieve your newsletter {{data['frequency']}}</p>
         <div class="govuk-panel__body">
           <img src="/public/images/mail100100100-black-small-icon.png" />
         </div>
