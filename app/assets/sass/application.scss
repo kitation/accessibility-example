@@ -23,6 +23,10 @@ $govuk-assets-path: '/govuk/assets/';
   color: #1d70b8;
 }
 
+.back-link {
+  font-size: 12px;
+}
+
 .bad-cell {
   color: govuk-colour("red")
 }
