@@ -16,4 +16,8 @@ router.get('working', function(req, res) {
   res.render('working');
 })
 
+router.get('form', function(req, res) {
+  res.render('form');
+})
+
 module.exports = router
